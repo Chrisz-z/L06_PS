@@ -6,11 +6,12 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
+
     <TextView
         android:id="@+id/tvDBS"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.3"
+        android:layout_weight="1"
         android:text="@string/dbs"
         android:gravity="center"/>
 
@@ -18,7 +19,7 @@
         android:id="@+id/tvOCBC"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.3"
+        android:layout_weight="1"
         android:text="@string/ocbc"
         android:gravity="center"/>
 
@@ -26,7 +27,9 @@
         android:id="@+id/tvUOB"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.3"
+        android:layout_weight="1"
         android:text="@string/uob"
         android:gravity="center"/>
+
+
 </LinearLayout>
