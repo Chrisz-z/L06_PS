@@ -13,15 +13,15 @@ import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
 
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvDBS;
-    TextView tvOCBC;
-    TextView tvUOB;
+    Button btnDBS;
+    Button tvOCBC;
+    Button btnUOB;
 
     String wordClicked = "";
 
@@ -29,12 +29,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tvDBS = findViewById(R.id.tvDBS);
+        btnDBS = findViewById(R.id.tvDBS);
         tvOCBC = findViewById(R.id.tvOCBC);
-        tvUOB = findViewById(R.id.tvUOB);
-        registerForContextMenu(tvDBS);
+        btnUOB = findViewById(R.id.tvUOB);
+        registerForContextMenu(btnDBS);
         registerForContextMenu(tvOCBC);
-        registerForContextMenu(tvUOB);
+        registerForContextMenu(btnUOB);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -74,9 +74,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        tvDBS.setText(getText((R.string.dbs)));
+        btnDBS.setText(getText((R.string.dbs)));
         tvOCBC.setText(getText((R.string.ocbc)));
-        tvUOB.setText(getText((R.string.uob)));
+        btnUOB.setText(getText((R.string.uob)));
     }
 
     @Override
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         menu.add(0,0,0,getString(R.string.optWeb));
         menu.add(0,1,1,getString(R.string.optContact));
 
-        if(v == tvDBS){
+        if(v == btnDBS){
             wordClicked = getString(R.string.dbs);
         }
         else if(v == tvOCBC){
