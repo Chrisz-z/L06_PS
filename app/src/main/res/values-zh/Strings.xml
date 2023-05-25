@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dbs">星展银行</string>
+    <string name="ocbc">华侨银行</string>
+    <string name="uob">大华银行</string>
+    <string name="optWeb">网站</string>
+    <string name="optContact">联系银行</string>
+</resources>
